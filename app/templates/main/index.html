@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Texturina">
+{% block content %}
+<div style="background-image:url('https://images.pexels.com/photos/1379627/pexels-photo-1379627.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');background-size: cover;background-repeat: no-repeat">
+ <div class="container bg-img" style="font-family:Texturina;font-size:17px">
+    <div class="landingspot">
+        <div class="textmiddle">
+            <h2 style="text-align: center;color:white">BLOGGER</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid" id="particles-js">
+       
+        <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+            <li class="nav-item">
+                <a id="cats" class="nav-link"  data-toggle="tab" href="#all" style="color: black"><strong>RECENT POSTS</strong></a>
+            </li>
+      
+    
+        </ul>
+        <div class="tab-content">
+            <div class="container tab-pane active" id="all"> <br>
+            {{macro.display(posts)}} </div>
+        </div>
+        <hr>
+       <div class="card md-1">
+        <h4 style="color:white"><strong>Learn a new quote:</strong></h4>
+        <p style="color: white;"><i>{{quotes.quote}}</i></p>
+        <p style="color:white"><strong>By:</strong> {{quotes.author}}</p>
+       </div>
+    </div>
+    
+
+
+ </div>
+</div>
+
+{% endblock %}
