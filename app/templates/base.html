@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Blog</title>
+        {% block styles %}
+         {{super()}}
+         <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+         <link rel="stylesheet" href="https://fonts.google.com/specimen/Texturina">
+        <!--Importing the simple mde css and js files  -->
+        {{ simplemde.css}}
+        {{ simplemde.js }}
+        {% endblock %}
+    </head>
+    <body style="font-family:Texturina;font-size: 17px">
+        {% block navbar %}
+        {% include 'navbar.html' %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        {% endblock %}
+
+    </body>
+</html>
