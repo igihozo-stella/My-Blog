@@ -3,7 +3,7 @@ from . import main
 from flask_login import login_required,login_user,current_user
 from .forms import UpdateForm,PostForm,CommentForm
 from ..models import User,Post,Comment
-from .. import db,photos
+from .. import db
 import requests
 from ..request import getQuotes
 
