@@ -18,7 +18,7 @@
             <h5 class="text-center" style="color:white">{{user.username | capitalize}}</h5>
             <hr>
             {% if user.bio %}
-            <p><i class="fas fa-quote-left" style="color:white"></i>{{user.bio}}</p>
+            <p><i style="color:white"></i>{{user.bio}}</p>
             {% endif %}
             {% if user == current_user %}
             <div class="profpic">

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+<div style="background-image:url('https://images.pexels.com/photos/1379627/pexels-photo-1379627.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');background-size: cover;background-repeat: no-repeat">
+ <div class="container bg-img">
+    <div class="row">
+        <div class="col-sm-3"> </div>
+        <div class="col-sm-6 updateprofile">       
+            {{wtf.quick_form(form)}}
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+ </div>
+</div>
+{% endblock %}

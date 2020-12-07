@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+<div
+    style="background-image:url('https://images.pexels.com/photos/1379627/pexels-photo-1379627.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');background-size: cover;background-repeat: no-repeat">
+    <div class="container bg-img">
+        <div class="row">
+            <div class="jumbotron" style="width: 50%">
+                <div class="col-md-2"> </div>
+                <div class="col-md-8" id="postform">
+                    <h2 class="text-center"> Post a New Blog</h2>
+                    {{wtf.quick_form(form)}}
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
