@@ -15,6 +15,8 @@ This application employs flask and database where the user is able to comment on
 - Flask
 - Text Editor
 
+## KNOWN BUGS
+- HEROKU app, user can't sign up or login due to unknown errors while deploying
 
 ## Technologies used
 
