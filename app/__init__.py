@@ -3,7 +3,7 @@ from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
-from flask_uploads import IMAGES,UploadSet,configure_uploads
+# from flask_uploads import IMAGES,UploadSet,configure_uploads
 from flask_mail import Mail
 from flask_simplemde import SimpleMDE
 
@@ -37,7 +37,7 @@ def create_app(config_name):
     bootstrap.init_app(app)
     mail.init_app(app)
     simple.init_app(app)
-    configure_uploads(app,photos)
+    # configure_uploads(app,photos)
 
     # Registering the blueprint
     from .main import main as main_blueprint
