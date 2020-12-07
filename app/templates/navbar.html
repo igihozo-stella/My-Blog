@@ -6,11 +6,11 @@
                 
                 
                 {% if current_user.is_authenticated %}
-                <li class="nav-item">                    
+                <li class="collapse navbar-collapse">                    
                         <a class="nav-link" href="{{url_for('main.new_post')}}"  style="color:black">Create Post</a>
                 </li>
              
-                    <li class="nav-item">
+                    <li class="collapse navbar-collapse">
                
                             <a class="nav-link" href="{{url_for('main.index')}}" style="color:black">Posts</a>
                     </li>
@@ -20,28 +20,29 @@
         <ul class="navbar-nav">
            {% if current_user.is_authenticated %}
     
-            <li class="nav-item">
-                    <a class="navbar-link" href="{{url_for('main.profile',name=current_user.username)}}"  style="color:black">Profile</a></li>
+            <li class="collapse navbar-collapse">
+                    <a class="navbar-link" href="{{url_for('main.profile',name=current_user.username)}}"  style="color:black;font-size: 10px">Profile</a></li>
                     <br>
+             </li>
+            <li class="collapse navbar-collapse">
+             <div >
+                 <a class="navbar-link"  href="{{url_for('auth.logout')}}" style="color:black;font-size: 10px"> Log Out</a>
         
-            <div >
-                 <a class="navbar-link"  href="{{url_for('auth.logout')}}" style="color:black"> Log Out</a>
-        
-            </div>
-        </li>
+              </div>
+            </li>
             
             {% else %}
-            <li class="nav-item">
+            <li class="collapse navbar-collapse">
          
            
              <a href="{{url_for('auth.login')}}" style="margin-right:30px; text-decoration:none;color:black " class="nav-link"> <strong>Login</strong></a>
             
             </li>
-                <li class="nav-item">
-                <a href="{{url_for('auth.register')}}" style="margin-right:30px;text-decoration:none;color:black  " class="nav-link"><strong>Sign Up</strong></a>
+                <li class="collapse navbar-collapse">
+                <a href="{{url_for('auth.register')}}" style="margin-right:30px;text-decoration:none;color:black;" class="nav-link"><strong>Sign Up</strong></a>
             </li>
             {% endif %}
-            </ul>
+         </ul>
     </div>
 </nav>
  

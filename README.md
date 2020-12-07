@@ -6,7 +6,7 @@ Igihozo Stella
 
 ## Description
 
-This application employs flask and database where the user is able to comment or delete post  but need to sign up to be able to post a blog.
+This application employs flask and database where the user is able to comment on a post  but need to sign up to be able to post a blog or delete it.
 
 ## Installation requirements 
 
